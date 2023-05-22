@@ -1,0 +1,145 @@
+﻿Name: Quang Khai Le 
+Class: EE104
+Professor: Christopher Pham
+
+
+Lab 2: Python demonstration document
+
+
+Github link: https://github.com/blade199916/Lab2_Le_QuangKhai.git
+
+
+Youtube link: 
+First part: https://youtu.be/wTI2T0v4Stw
+Continue part since I got cut off: https://youtu.be/DqUtdgAE8J4
+
+
+Google drive link (just in case): https://drive.google.com/file/d/1hfKj64uzQnJlHeIhfg0L4bH89ZNChZph/view?usp=share_link
+https://drive.google.com/file/d/1xvHJNb_ygT29jp7RRup92KdnZBMX6Bcq/view?usp=share_link
+
+
+Reference: https://www.activestate.com/resources/quick-reads/how-to-manually-install-python-packages/
+Reference: https://www.twilio.com/docs/sms/quickstart/python
+Reference:https://stackoverflow.com/questions/59631659/i-dont-understand-why-i-get-a-too-many-values-to-unpack-error
+
+
+This code is guiding you to install proper python package by using pip on WindowOS and later use their basic understanding to execute from simple to complicated program. 
+This code is composed of the GUI login from simplifiedpython.net and the Simple Registartion
+Form from geeksforgeeks.org (Refernces above). The code in the file is also provided from ee 104 at sjsu belonging to professor Chritopher Pham.
+
+
+
+
+1. The first step is to install from PyPI
+The most common usage of pip is to install from the Python Package Index by required user to type in the command corresponding to the requirement specifier, which can be desribed as a composed 
+of a project/library/program/simulation name followed by an optional version specifier. 
+A full specification of the currently supported specifiers are currently available in PEP 440 for user efficiency in Python. To their specific purposes, .there are two main examples:  
+To install the latest version of “SomeProject”:
+        python3 -m pip install "SomeProject"
+To install a specific version:
+        python3 -m pip install "SomeProject==1.4"
+
+
+2. Source Distributions vs Wheels
+pip can install from either Source Distributions (sdist) or Wheels, but if both are present on PyPI, pip will prefer a compatible wheel. You can override pip`s default behavior by e.g. using its –no-binary option.
+
+
+Wheels is defined as a pre-built distribution format for faster installation compared to Source Distributions (sdist), especially when a project contains compiled extensions.
+
+
+If pip does not find a wheel to install, it will locally build a wheel and cache it for further us of it to install in order to avoid rebuilding the source distribution in the future.
+
+
+3. Executing python package in terminal
+Example, execute simplecalculator
+        python /Users/lqkvn1999/Documents/EE104 Lab1/python/simplecalculator.py
+  
+
+
+
+About the GUI project: 
+
+
+1) I have to check the library below that were installed or not
+It should contain those working library below: 
+from tkinter import *
+from openpyxl import *
+from datetime import date, datetime, timedelta (pip install datetime)
+import pandas as pd (pip install pandas)
+import os
+import smtplib, ssl
+from twilio.rest import Client (pip install twilio)
+  
+
+
+
+
+
+Instructions: 
+- check the errors and installation to avoid wasting your time
+- operate the applications
+- Type in the input of yourself 
+- click OK to exit! in the popup window to close login screen (unnecessary screen after logging in)
+- Register or input information
+  - The phone number must be in a 10 digit format without dashes or parentheses ex. 0123456789
+  - enter email in regular email format ex. josedogsnop@gmail.com
+  - enter date in the following format with dashes as shown (YYYY-MM-DD) ex. 2021-03-02
+  - submit
+  - professor toll to check a date will pop up. the original date that was inputted for the first
+    vaccine and the second vaccine date are shown to the left in the black box in red letters for reference.
+  - Enter a date in the same format that i sthree days prior to the second vaccination date (YYYY-MM_DD)
+  - click OK to exit to close the date check screen
+- registration form clears and is ready for a new registration
+
+
+# Module 1 GUI REGISTRATION DATABSE (Description of Module 1) SKIP to module 2 below!
+  
+
+I Added three more field to the User database and define a function called ‘focus’.
+  
+
+  
+
+Make the change in your picture is extremely important to match your directory png
+# Module 2 Info listed below
+In order to operate both programs from the same source code each source code for each 
+the program had to be changed in some manner. For example, grid and packs cannot be 
+used together in the same code so the code portion from the GUI login
+the program had to be changed to work with a grid. Additionally, the registration form program code had to be
+changed to operate as a "pop up screen" upon user login within the GUI code. To make the Registration
+form program operate with the GUI interface global variables had to be created for each user input and
+related variables. Other program additions include background image, which was implemented thanks
+to the stackoverflow questions page (referenced above). Other changes include automatic closure of
+windows upon completion of tasks, such as registration form submission. Other charges also
+include popups that notify the user of submission form success and empty text boxes. Other changes include
+changing the username and password files from a ".txt" to a "xlsx" file. 
+
+
+
+
+# Module 2 VACCINATION 
+  
+
+The code was already linked together with the login and registration form.
+I simply downloaded the file code "sendMailFromCSV.py" modified as desired 
+to work with a csv dataframe that was managed with the pandas module (Pandas must be installed)
+(To utilize the email server smtlib and ssl were imported)
+User data is directly saved to SimpleRegistrationDatabase.xlsx and COVID_Database.csv
+date, datetime and timedelta were used to manipulate the date inputs.
+(datetime must be installed and date, datetime and time delta must be imported)
+One main error that was encountered was a datetime error that involved date formatting
+to fix this issue a timedelta of 5 minutes as added to the original first vaccination date input.
+Of Course a timedelta of 21 days was also added for the second vaccination date.
+The text messaging feature utilizes twilio's messaging sms messaging service
+(Reference: https://www.twilio.com/docs/sms/quickstart/python)
+the input for the phonenumber must be a 10digit phone number without parnthesis ot dashes
+for example 8312224456.
+(Install twilio module) (pip install twilio)
+
+
+  
+
+  
+  
+
+Figures: the successful attempt at my results
